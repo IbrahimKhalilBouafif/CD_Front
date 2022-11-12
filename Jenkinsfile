@@ -16,5 +16,13 @@ pipeline {
           }
        }
     }
+
+    stage('Docker Build') {
+      steps {
+        script {
+           sh 'ansible-playbook ansible/docker.yml -i ansible/inventory/hosts.yml'
+          }
+       }
+    }
    }
 }
