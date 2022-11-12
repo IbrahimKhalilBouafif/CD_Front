@@ -1,6 +1,4 @@
 ---
-- name: install app
-  shell: npm install
 - name: build app
   shell: ng build --prod
   
